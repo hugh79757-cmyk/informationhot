@@ -1,0 +1,31 @@
+{{- $type := .type | default "auto" -}}
+
+{{- if eq $type "auto" }}
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6677996696534146"
+     data-ad-slot="7251932265"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+{{- end }}
+
+{{- if eq $type "sidebar" }}
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6677996696534146"
+     data-ad-slot="7251932265"
+     data-ad-format="vertical"
+     data-full-width-responsive="false"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+{{- end }}
+
+{{- if eq $type "infeed" }}
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6677996696534146"
+     data-ad-slot="7251932265"
+     data-ad-format="fluid"
+     data-ad-layout-key="-fb+5w+4e-db+86"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+{{- end }}

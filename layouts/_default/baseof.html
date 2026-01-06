@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang }}" dir="{{ site.Language.LanguageDirection | default "ltr" }}">
+
+{{- partial "head.html" . }}
+
+<!-- 애드센스 스크립트 (한 번만 로드) -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6677996696534146"
+   crossorigin="anonymous"></script>
+
+<body class="
+{{- if (eq .Kind "home") }} home
+{{- else if (eq .Kind "page") }} page
+{{- else if (eq .Kind "section") }} section
+{{- else if (eq .Kind "term") }} term
+{{- else if (eq .Kind "taxonomy") }} taxonomy
+{{- end -}}
+{{- if site.Params.defaultTheme | eq "dark" }} dark{{ end }}" id="top">
+
+{{- partialCached "header.html" . .Page -}}
+
+<!-- 메인 레이아웃: 사이드레일 광고 포함 -->
+<div class="layout-wrapper">
+  
+  <!-- 왼쪽 사이드레일 광고 (데스크톱만) -->
+  <aside class="side-rail side-rail--left">
+    <div class="side-rail__sticky">
+      <div class="side-rail__ad">
+        {{- partial "adsense.html" (dict "type" "sidebar") }}
+      </div>
+    </div>
+  </aside>
+  
+  <!-- 메인 콘텐츠 영역 -->
+  <main class="main">
+    {{- block "main" . }}{{ end }}
+  </main>
+  
+  <!-- 오른쪽 사이드레일 광고 (데스크톱만) -->
+  <aside class="side-rail side-rail--right">
+    <div class="side-rail__sticky">
+      <div class="side-rail__ad">
+        {{- partial "adsense.html" (dict "type" "sidebar") }}
+      </div>
+      <div class="side-rail__ad side-rail__ad--bottom">
+        {{- partial "adsense.html" (dict "type" "sidebar") }}
+      </div>
+    </div>
+  </aside>
+  
+</div>
+
+{{- partialCached "footer.html" . .Page -}}
+
+</body>
+</html>

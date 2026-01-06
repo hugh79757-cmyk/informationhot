@@ -1,0 +1,82 @@
+{{- define "main" }}
+
+<div class="ad-slot ad-slot--top">
+  {{- partial "adsense.html" (dict "type" "auto") }}
+</div>
+
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $paginator := .Paginate $pages }}
+
+{{- if gt (len $paginator.Pages) 0 }}
+<div class="magazine-grid">
+  {{- range $index, $page := $paginator.Pages }}
+  
+  {{- if eq $index 0 }}
+  <article class="magazine-card magazine-card--hero">
+    <a href="{{ .Permalink }}" class="magazine-card__link">
+      {{- $image := "" }}
+      {{- with .Params.cover.image }}{{- $image = . }}{{- end }}
+      {{- with .Params.image }}{{- $image = . }}{{- end }}
+      {{- with .Params.thumbnail }}{{- $image = . }}{{- end }}
+      
+      {{- if $image }}
+      <div class="magazine-card__image"><img src="{{ $image }}" alt="{{ .Title }}" loading="lazy"></div>
+      {{- else }}
+      <div class="magazine-card__image magazine-card__image--placeholder">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/></svg>
+      </div>
+      {{- end }}
+      
+      <div class="magazine-card__content">
+        {{- with .Params.categories }}<div class="magazine-card__categories">{{- range first 1 . }}<span class="magazine-card__category">{{ . }}</span>{{- end }}</div>{{- end }}
+        <h2 class="magazine-card__title">{{ .Title }}</h2>
+        <p class="magazine-card__excerpt">{{- if .Description }}{{ .Description | truncate 150 }}{{- else }}{{ .Summary | truncate 150 }}{{- end }}</p>
+        <div class="magazine-card__meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006년 1월 2일" }}</time></div>
+      </div>
+    </a>
+  </article>
+  {{- else }}
+  <article class="magazine-card">
+    <a href="{{ .Permalink }}" class="magazine-card__link">
+      {{- $image := "" }}
+      {{- with .Params.cover.image }}{{- $image = . }}{{- end }}
+      {{- with .Params.image }}{{- $image = . }}{{- end }}
+      {{- with .Params.thumbnail }}{{- $image = . }}{{- end }}
+      
+      {{- if $image }}
+      <div class="magazine-card__image"><img src="{{ $image }}" alt="{{ .Title }}" loading="lazy"></div>
+      {{- else }}
+      <div class="magazine-card__image magazine-card__image--placeholder">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/></svg>
+      </div>
+      {{- end }}
+      
+      <div class="magazine-card__content">
+        {{- with .Params.categories }}<div class="magazine-card__categories">{{- range first 1 . }}<span class="magazine-card__category">{{ . }}</span>{{- end }}</div>{{- end }}
+        <h3 class="magazine-card__title">{{ .Title }}</h3>
+        <p class="magazine-card__excerpt">{{- if .Description }}{{ .Description | truncate 80 }}{{- else }}{{ .Summary | truncate 80 }}{{- end }}</p>
+        <div class="magazine-card__meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time></div>
+      </div>
+    </a>
+  </article>
+  {{- end }}
+  
+  {{- if or (eq $index 2) (eq $index 5) (eq $index 8) }}
+  <div class="magazine-ad-slot">{{- partial "adsense.html" (dict "type" "infeed") }}</div>
+  {{- end }}
+  
+  {{- end }}
+</div>
+
+{{- if gt $paginator.TotalPages 1 }}
+<nav class="pagination">
+  {{- if $paginator.HasPrev }}<a class="pagination__link" href="{{ $paginator.Prev.URL }}">← 이전</a>{{- end }}
+  <span class="pagination__info">{{ $paginator.PageNumber }} / {{ $paginator.TotalPages }}</span>
+  {{- if $paginator.HasNext }}<a class="pagination__link" href="{{ $paginator.Next.URL }}">다음 →</a>{{- end }}
+</nav>
+{{- end }}
+{{- end }}
+
+<div class="ad-slot ad-slot--bottom">{{- partial "adsense.html" (dict "type" "auto") }}</div>
+
+{{- end }}

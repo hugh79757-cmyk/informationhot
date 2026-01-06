@@ -1,0 +1,38 @@
+{{- define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  <p class="page-description">{{ len .Pages }}개의 포스트</p>
+</header>
+
+{{- $paginator := .Paginate .Pages }}
+
+{{- if gt (len $paginator.Pages) 0 }}
+<div class="magazine-grid">
+  {{- range $page := $paginator.Pages }}
+  <article class="magazine-card">
+    <a href="{{ .Permalink }}" class="magazine-card__link">
+      {{- $image := "" }}
+      {{- with .Params.cover.image }}{{- $image = . }}{{- end }}
+      {{- with .Params.image }}{{- $image = . }}{{- end }}
+      
+      {{- if $image }}
+      <div class="magazine-card__image"><img src="{{ $image }}" alt="{{ .Title }}" loading="lazy"></div>
+      {{- else }}
+      <div class="magazine-card__image magazine-card__image--placeholder">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zm-5-7l-3 3.72L9 13l-3 4h12l-4-5z"/></svg>
+      </div>
+      {{- end }}
+      
+      <div class="magazine-card__content">
+        <h3 class="magazine-card__title">{{ .Title }}</h3>
+        <p class="magazine-card__excerpt">{{- if .Description }}{{ .Description | truncate 80 }}{{- else }}{{ .Summary | truncate 80 }}{{- end }}</p>
+        <div class="magazine-card__meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006.01.02" }}</time></div>
+      </div>
+    </a>
+  </article>
+  {{- end }}
+</div>
+{{- end }}
+
+{{- end }}

@@ -1,22 +1,36 @@
-baseURL = "https://informationhot-8z9.pages.dev/"
+baseURL = "https://informationhot-8z9.pages.dev/"  # 나중에 informationhot.kr 로 변경
 title = "informationhot"
 theme = "PaperMod"
 languageCode = "ko-kr"
 defaultContentLanguage = "ko"
+
 [pagination]
   pagerSize = 10
 
+# URL 구조 설정 (워드프레스와 비슷하게)
+[permalinks]
+  posts = "/:slug/"
+  news  = "/news/:slug/"
 
 [params]
-  defaultTheme = "auto"
+  defaultTheme = "auto"       # auto / light / dark
   ShowReadingTime = true
   ShowShareButtons = false
   ShowPostNavLinks = true
   ShowBreadCrumbs = true
   ShowCodeCopyButtons = true
-  mainSections = ["posts"]
-  posts = "/:slug/"
-  news  = "/news/:slug/"
+
+  # 홈에서 어떤 섹션을 "최근 글"로 쓸지
+  mainSections = ["posts", "news"]
+
+  # 홈 상단 소개 영역
+  [params.homeInfoParams]
+    Title = "informationhot"
+    Content = "뉴스, 민생, 정책, 생활 정보를 한 곳에 모으는 블로그입니다."
+
+  # 글 페이지 자동 목차 (원하면 끄거나 조정)
+  ShowToc = true
+  TocOpen = true
 
 [menu]
   [[menu.main]]
@@ -29,9 +43,15 @@ defaultContentLanguage = "ko"
     url = "/posts/"
     weight = 2
 
+  [[menu.main]]
+    name = "뉴스"
+    url = "/news/"
+    weight = 3
+
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
 
+# raw HTML 경고 숨기기
 ignoreLogs = ['warning-goldmark-raw-html']
