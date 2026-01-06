@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//informationhot.kr/main-sitemap.xsl"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<sitemap>
+		<loc>https://informationhot.kr/post-sitemap.xml</loc>
+		<lastmod>2025-11-09T08:19:09+00:00</lastmod>
+	</sitemap>
+	<sitemap>
+		<loc>https://informationhot.kr/page-sitemap.xml</loc>
+		<lastmod>2025-07-22T05:07:16+00:00</lastmod>
+	</sitemap>
+	<sitemap>
+		<loc>https://informationhot.kr/category-sitemap.xml</loc>
+		<lastmod>2025-11-09T08:19:09+00:00</lastmod>
+	</sitemap>
+</sitemapindex>

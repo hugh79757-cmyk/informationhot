@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="//informationhot.kr/main-sitemap.xsl"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	<url>
+		<loc>https://informationhot.kr/category/%ec%a0%95%eb%b6%80%ec%a7%80%ec%9b%90%ea%b8%88/</loc>
+		<lastmod>2025-07-23T07:19:40+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://informationhot.kr/category/%ec%a7%80%ea%b8%88-%eb%89%b4%ec%8a%a4/</loc>
+		<lastmod>2025-11-09T08:19:09+00:00</lastmod>
+	</url>
+	<url>
+		<loc>https://informationhot.kr/category/%ec%9d%b4%ed%98%bc-%ed%9b%84-%ec%96%91%ec%9c%a1%eb%b9%84-%eb%ac%b8%ec%a0%9c-%ed%95%b4%ea%b2%b0/</loc>
+		<lastmod>2025-07-05T08:12:20+00:00</lastmod>
+	</url>
+</urlset>
