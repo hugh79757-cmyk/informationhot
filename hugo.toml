@@ -1,4 +1,4 @@
-baseURL = "https://informationhot.pages.dev/" # 나중에 실제 도메인으로 바꾸면 됨
+baseURL = "https://informationhot-8z9.pages.dev/"
 title = "informationhot"
 theme = "PaperMod"
 languageCode = "ko-kr"
