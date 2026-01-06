@@ -42,8 +42,8 @@ rank_math_analytic_object_id:
   
   <div class="buttons">
     <a href="https://informationhot.kr/category/%ec%a7%80%ea%b8%88-%eb%89%b4%ec%8a%a4/" class="btn-primary">오늘의 핫이슈 보기</a> <a href="https://informationhot.kr/category/%ec%a0%95%eb%b6%80%ec%a7%80%ec%9b%90%ea%b8%88/" class="btn-secondary">지원금 신청방법 안내</a>
-  </div>
-</div>
+
+
 
 <div class="hero-image">
   <img decoding="async" src="https://informationhot.kr/wp-content/uploads/2025/06/img_8981b133.webp" alt="정보 아이콘들" />
@@ -52,9 +52,8 @@ rank_math_analytic_object_id:
 <div class="wp-block-group alignwide is-nowrap is-layout-flex wp-container-core-group-is-layout-ad2f72ca wp-block-group-is-layout-flex">
   <div style="text-align: center;">
     <a href="https://rotcha.kr/entry/%EB%AF%BC%EC%83%9D%ED%9A%8C%EB%B3%B5-%EC%A7%80%EC%9B%90%EA%B8%88-%EC%8B%A0%EC%B2%AD%ED%95%98%EA%B8%B0" target="_blank" rel="noopener noreferrer"> <img decoding="async" src="https://blogger.googleusercontent.com/img/a/AVvXsEhGWFk7XEOdxpykCT9lSH6ypWvLGNU8fnZrhTWRMQaQB9PQxGySzPRdO2pTunRKJNWyv3nP6lFK4ORA2LHgQHeRefeDWZ8oTDGSizzLxmfSqOTB5LQ-zHm5PlSd8jkRsrskOzEujP1k1R_TngTiXF8sT5vtbrrspqDMgeawLtUXhSpUdrAneHmQmWpmyzzq=rw" alt="민생회복 지원금 소비쿠폰 신청하기" style="width:100%; max-width:300px; height:auto; border:0;" /> </a>
-  </div>
+
   
   <div style="text-align: center; margin: 20px 0;">
     <a href="https://informationhot.kr/%ec%96%91%ec%9c%a1%eb%b9%84-%ec%9d%b4%ed%96%89%eb%aa%85%eb%a0%b9-%ec%8b%a0%ec%b2%ad%eb%b0%a9%eb%b2%95/" target="_blank" rel="noopener"> <img decoding="async" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEivsldEJk3BaZdN75SobwrAwm7SmrqdFYKsAeLh7sEc4TEXx0ojf7tGCPHZPxLRXYb9QnVjq5BNCLmjYHjIaahU8OGL2kEWg5XjCCGM5uRa9lVeCY31zA2gDI7sdFosOuNKO0PVEcxG8ljCidinNJBeOvoCddK5SNcKkVfOYOB18PI5KfPuusie120XrPFB/w400-h400-rw/img_f27f7dea_bordered.webp" alt="양육비 이행명령 신청하기" style="width:100%; max-width:300px; height:auto; border:0;" /> </a>
-  </div>
-</div>
+
